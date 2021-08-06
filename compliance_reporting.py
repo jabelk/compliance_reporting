@@ -1,3 +1,7 @@
+from jinja2 import Environment
+from jinja2 import FileSystemLoader
+import os
+
 def j2_template_wrapper(template_service_name, **kwargs):
     """
     adapted from Santiago's code:
@@ -16,3 +20,6 @@ def j2_template_wrapper(template_service_name, **kwargs):
 
 if __name__ == "__main__":
   delete_loopback(dry_run=False)
+  template_output = j2_template_wrapper(template_service_name="wan",intf="Ethernet1/0",intdscr="WAN_byJinja",ip="10.1.1.1",
+                  mask="255.255.255.252", qospol="200MB_SHAPE",bgpasn="65456",
+                  bgpnip="10.1.1.2",remasn="65499")
