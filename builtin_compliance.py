@@ -81,8 +81,6 @@ def extract_report_values(dict_report):
                 "config_result" : config_snippet.get("informalexample").get("screen")
             }
         )
-        # print(config_snippet.get("title"))
-        # print(config_snippet.get("informalexample").get("screen"))
 
     report_details = {
         "which_compliance_report" : dict_report.get("article").get("sect1")[1].get("sect2").get("sect3").get("title"),
