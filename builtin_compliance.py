@@ -93,7 +93,7 @@ def extract_report_values(dict_report):
 
 
 if __name__ == "__main__":
-    create_report(report_format="html", server_name="http://10.10.20.50:8080", report_name="check-motd", user="admin", password="admin")
+    create_report(report_format="xml", server_name="http://10.10.20.50:8080", report_name="check-motd", user="admin", password="admin")
     # Manually rename file to remove special characters. Then re-run the script. Put report_name= new name of file
     dict_report = translate_json_report(report_name="test_audit_1.xml", output_report_name="audit_convert.json")
     report_meta_data, report_summary, report_details = extract_report_values(dict_report)
